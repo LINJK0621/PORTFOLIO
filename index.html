@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>林俊鎧| 作品集</title>
+  <title>林俊鎧 | 作品集 & 履歷</title>
   <link rel="icon" type="image/x-icon" href="images/fu6ek.png">
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -45,8 +45,9 @@
     <a href="#about" class="text-xl font-black tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-neonCyan via-neonBlue to-neonPurple hover:opacity-80 transition">
       PORTFOLIO<span class="text-neonCyan">.</span>
     </a>
-    <div class="space-x-6 text-sm font-medium text-gray-300">
+    <div class="space-x-4 sm:space-x-6 text-sm font-medium text-gray-300">
       <a href="#about" class="hover:text-neonCyan transition">關於我</a>
+      <a href="#resume" class="hover:text-neonCyan transition">個人履歷</a>
       <a href="#videos" class="hover:text-neonCyan transition">影音作品</a>
       <a href="#gallery" class="hover:text-neonCyan transition">圖片作品</a>
       <a href="#contact" class="hover:text-neonCyan transition">聯絡資訊</a>
@@ -59,7 +60,7 @@
     <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-neonPurple/10 rounded-full blur-[120px] pointer-events-none"></div>
     
     <div class="max-w-4xl text-center relative z-10">
-      <!-- 大頭照 (已修復路徑語法) -->
+      <!-- 大頭照 -->
       <div class="inline-block p-1 rounded-full bg-gradient-to-tr from-neonCyan via-neonBlue to-neonPurple mb-8 glow-purple">
         <img src="images/me.png" alt="Avatar" class="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-2 border-techDark">
       </div>
@@ -68,20 +69,154 @@
         HI, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-neonCyan to-neonPurple">林俊鎧</span>
       </h1>
       
-      <p class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed mb-8">
-        熱衷於數位創作與開發，專長涵蓋遊戲製作、影像剪輯與 3D 美術設計。喜歡探索科技與視覺的結合。
+      <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed mb-6">
+        數位多媒體設計系畢業 | 3D建模・3D列印・手作塗裝・電子整合
       </p>
 
-      <!-- 標籤 (已修復錯字) -->
+      <p class="text-sm md:text-base text-gray-400 max-w-2xl mx-auto leading-relaxed mb-8">
+        接觸 3D 建模、光固化與 FDM 列印、噴塗/筆塗與基礎電子整合。具備將數位設計轉化為實體作品的經驗，期望運用跨領域技術於實體模型與數位資產創作中。
+      </p>
+
+      <!-- 標籤 -->
       <div class="flex flex-wrap justify-center gap-3">
-        <span class="px-4 py-1.5 rounded-full text-xs font-semibold bg-neonPurple/10 text-neonPurple border border-neonPurple/30">Unity / Game Dev</span>
-        <span class="px-4 py-1.5 rounded-full text-xs font-semibold bg-neonCyan/10 text-neonCyan border border-neonCyan/30">Video Editing</span>
-        <span class="px-4 py-1.5 rounded-full text-xs font-semibold bg-neonBlue/10 text-neonBlue border border-neonBlue/30">3D Art & 3D Modeling</span>
+        <span class="px-4 py-1.5 rounded-full text-xs font-semibold bg-neonPurple/10 text-neonPurple border border-neonPurple/30">3D Modeling & Printing</span>
+        <span class="px-4 py-1.5 rounded-full text-xs font-semibold bg-neonCyan/10 text-neonCyan border border-neonCyan/30">Hand Painting & Finishing</span>
+        <span class="px-4 py-1.5 rounded-full text-xs font-semibold bg-neonBlue/10 text-neonBlue border border-neonBlue/30">Electronics Integration</span>
       </div>
     </div>
   </section>
 
-  <!-- 3. 5部 YouTube 嵌入影片區塊（5 欄橫向並排） -->
+  <!-- 3. 個人履歷區塊 (Resume / Experience Section) -->
+  <section id="resume" class="py-24 px-6 max-w-5xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-neonCyan to-neonPurple inline-block">
+        RESUME & EXPERIENCE
+      </h2>
+      <p class="text-gray-400 text-sm mt-2">個人履歷與專業背景資訊</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- 左欄：基本資料 & 技能工具 & 證照 -->
+      <div class="space-y-6">
+        <!-- 基本資料卡片 -->
+        <div class="glass-card p-6 rounded-2xl border border-neonCyan/30 glow-cyan">
+          <h3 class="text-lg font-bold text-neonCyan mb-4 flex items-center gap-2">
+            <span>👤</span> 基本資料
+          </h3>
+          <ul class="space-y-2 text-sm text-gray-300">
+            <li><strong class="text-gray-100">學歷：</strong>正修科技大學 數位多媒體設計系</li>
+            <li><strong class="text-gray-100">駕照：</strong>普通小型車、普通重型機車</li>
+          </ul>
+        </div>
+
+        <!-- 軟體與工具 (Tool Box) -->
+        <div class="glass-card p-6 rounded-2xl border border-neonPurple/30">
+          <h3 class="text-lg font-bold text-neonPurple mb-4 flex items-center gap-2">
+            <span>🛠️</span> 工具技能 (Tool Box)
+          </h3>
+          <div class="flex flex-wrap gap-2 text-xs font-mono">
+            <span class="px-2.5 py-1 rounded bg-techDark text-neonCyan border border-neonCyan/20">Blender</span>
+            <span class="px-2.5 py-1 rounded bg-techDark text-neonCyan border border-neonCyan/20">Maya</span>
+            <span class="px-2.5 py-1 rounded bg-techDark text-neonPurple border border-neonPurple/20">Photoshop</span>
+            <span class="px-2.5 py-1 rounded bg-techDark text-neonPurple border border-neonPurple/20">Illustrator</span>
+            <span class="px-2.5 py-1 rounded bg-techDark text-neonBlue border border-neonBlue/20">Bambu Studio</span>
+            <span class="px-2.5 py-1 rounded bg-techDark text-neonBlue border border-neonBlue/20">Unity</span>
+            <span class="px-2.5 py-1 rounded bg-techDark text-gray-300 border border-gray-700">3D Printing</span>
+            <span class="px-2.5 py-1 rounded bg-techDark text-gray-300 border border-gray-700">Basic Soldering</span>
+          </div>
+        </div>
+
+        <!-- 專業證照 (Certificate) -->
+        <div class="glass-card p-6 rounded-2xl border border-neonPurple/30">
+          <h3 class="text-lg font-bold text-neonPurple mb-4 flex items-center gap-2">
+            <span>📜</span> 證照與獎項
+          </h3>
+          <ul class="space-y-2 text-xs text-gray-300 list-disc list-inside">
+            <li>Autodesk Certified User: Maya</li>
+            <li>Adobe Photoshop / Illustrator 認證</li>
+            <li>丙級工業電子技術士</li>
+            <li class="pt-2 text-neonCyan font-semibold">2024 全國大專校院智慧創新競賽 體感互動組 第三名</li>
+            <li class="text-neonCyan font-semibold">2024 校園程式設計競賽 創意應用組佳作</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 右欄：相關經歷 & 實體專案基礎 (佔 2 欄) -->
+      <div class="md:col-span-2 space-y-6">
+        <!-- 核心能力基礎 -->
+        <div class="glass-card p-6 rounded-2xl border border-neonPurple/30">
+          <h3 class="text-xl font-bold text-white mb-4">核心實作能力基礎</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+            <div class="p-3 rounded-lg bg-techDark/50 border border-purple-900/30">
+              <h4 class="font-bold text-neonCyan mb-1">01. 3D 建模與列印</h4>
+              <p class="text-gray-400">使用 Blender/Maya 製作 3D 模型，具備 FDM/光固化列印、切片與實體輸出經驗。</p>
+            </div>
+            <div class="p-3 rounded-lg bg-techDark/50 border border-purple-900/30">
+              <h4 class="font-bold text-neonPurple mb-1">02. 手作塗裝實務</h4>
+              <p class="text-gray-400">以噴塗與筆塗完成實體模型作品，熟練掌握配色、邊界界線與局部細節控制。</p>
+            </div>
+            <div class="p-3 rounded-lg bg-techDark/50 border border-purple-900/30">
+              <h4 class="font-bold text-neonCyan mb-1">03. 電子與結構整合</h4>
+              <p class="text-gray-400">具備基礎焊接與電路作品經驗，能將 Type-C/LED 等電子元件整合於實體作品中。</p>
+            </div>
+            <div class="p-3 rounded-lg bg-techDark/50 border border-purple-900/30">
+              <h4 class="font-bold text-neonPurple mb-1">04. 資產管理與專案協作</h4>
+              <p class="text-gray-400">整理 3D 資產規格，具備設備借還管理、跨組溝通與現場活動執行經驗。</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 經歷時間軸 -->
+        <div class="glass-card p-6 rounded-2xl border border-neonBlue/30">
+          <h3 class="text-xl font-bold text-white mb-6">相關經歷 (Experience)</h3>
+          
+          <div class="relative border-l-2 border-neonBlue/30 ml-3 space-y-8">
+            <!-- 經歷 1 -->
+            <div class="relative pl-6">
+              <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-techDark border-2 border-neonCyan"></div>
+              <span class="text-xs font-mono text-neonCyan">2025.07 - 2025.09</span>
+              <h4 class="text-base font-bold text-white mt-0.5">Smart Informatics Ltd. | 3D Map Tiles Designer</h4>
+              <p class="text-xs text-gray-400 mt-1 leading-relaxed">
+                加拿大 42 天海外實習。製作虛擬世界地形與物件圖塊，依團隊需求補充 3D Tiles，並整理元件規範協助資產整合。
+              </p>
+            </div>
+
+            <!-- 經歷 2 -->
+            <div class="relative pl-6">
+              <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-techDark border-2 border-neonPurple"></div>
+              <span class="text-xs font-mono text-neonPurple">2025 - 2026</span>
+              <h4 class="text-base font-bold text-white mt-0.5">115級畢業展籌備委員會 | 互動組副召集人</h4>
+              <p class="text-xs text-gray-400 mt-1 leading-relaxed">
+                規劃設備借還、維安人力與跨組需求協調，支援校內展、走廊展現場執行。
+              </p>
+            </div>
+
+            <!-- 經歷 3 -->
+            <div class="relative pl-6">
+              <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-techDark border-2 border-neonBlue"></div>
+              <span class="text-xs font-mono text-neonBlue">2024</span>
+              <h4 class="text-base font-bold text-white mt-0.5">數位多媒體設計系系學會 | 器材組長</h4>
+              <p class="text-xs text-gray-400 mt-1 leading-relaxed">
+                負責活動器材管理與現場支援；2023 年曾任器材組員及各項活動工作人員。
+              </p>
+            </div>
+
+            <!-- 經歷 4 -->
+            <div class="relative pl-6">
+              <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-techDark border-2 border-gray-500"></div>
+              <span class="text-xs font-mono text-gray-400">在學期間</span>
+              <h4 class="text-base font-bold text-white mt-0.5">課程教學助理 (TA)</h4>
+              <p class="text-xs text-gray-400 mt-1 leading-relaxed">
+                協助教學行政、解答學習問題，並整理培訓報告、研習證書及相關檔案。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. 5部 YouTube 嵌入影片區塊（5 欄橫向並排） -->
   <section id="videos" class="py-24 px-4 sm:px-6 max-w-[1600px] mx-auto">
     <div class="text-center mb-12">
       <h2 class="text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-neonCyan to-neonPurple inline-block">
@@ -90,7 +225,7 @@
       <p class="text-gray-400 text-sm mt-2">精選 5 部影音專案與動態創作</p>
     </div>
 
-    <!-- 5 欄網格排版：手機 1 欄 | 平板 3 欄 | 電腦 5 欄並排 -->
+    <!-- 5 欄網格排版 -->
     <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-4">
       
       <!-- 影片 1 -->
@@ -146,13 +281,12 @@
     </div>
   </section>
 
-  <!-- 4. 圖片作品畫廊 - 具備箭頭切換與同步說明功能 -->
+  <!-- 5. 圖片作品畫廊 -->
   <section id="gallery" class="py-16 px-6 max-w-4xl mx-auto">
     <div class="text-center mb-12">
       <h2 class="text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-neonPurple to-neonCyan inline-block">
         GRAPHIC GALLERY
       </h2>
-     
     </div>
 
     <!-- 輪播主容器 -->
@@ -163,7 +297,7 @@
         <img id="gallery-image" src="" alt="Work Art" class="w-full h-full object-contain transition-opacity duration-500 opacity-100">
         <div class="absolute inset-0 bg-gradient-to-t from-techDark via-transparent to-techDark/20 pointer-events-none"></div>
 
-        <!-- 切換箭頭 (固定置中於圖片上) -->
+        <!-- 切換箭頭 -->
         <button onclick="prevSlide()" class="absolute left-4 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-techDark/60 text-neonCyan border border-neonCyan/30 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-neonCyan/20 hover:scale-110 focus:outline-none" aria-label="Previous Slide">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
@@ -189,9 +323,8 @@
     </div>
   </section>
 
-  <!-- 5. JavaScript 邏輯 -->
+  <!-- 6. JavaScript 邏輯 -->
   <script>
-    // 1. 定義你的作品資料 (在此處修改圖片網址與文字)
     const worksData = [
       {
         image: 'images/鬆餅.png',
@@ -199,14 +332,6 @@
         title: '三層美式鬆餅 3D 靜物模型',
         desc: '使用 Blender 進行 3D 建模，並運用 NPR（非寫實渲染）與 Cell-shading 賽璐珞風格 Shader，呈現出如 2D 手繪動畫般的美食質感與奶油流動感。'
       },
-      /*
-      {
-        image: 'https://via.placeholder.com/1200x600/1a1b2e/06b6d4?text=Work+2',
-        tag: 'UI DESIGN',
-        title: '賽博龐克遊戲介面',
-        desc: '為 Unity 專案設計的 HUD 與主選單介面，強調藍紫高對比色調與幾何線條。'
-      }
-        */
       {
         image: 'images/花園鰻渲染2.png',
         tag: '3D MODEL',
@@ -262,11 +387,11 @@
         desc: '充滿黑色幽默與超現實主義風格的 3D 概念作品。翻轉經典速食盒與薯條的外觀，將其替換為帶有深色指甲的手指，呈現視覺上的衝擊感與獨特的荒謬美學。'
       },
       {
-  image: 'images/公園路燈.png',
-  tag: '3D ENVIRONMENT',
-  title: '深夜公園角落 - 道路施工',
-  desc: '使用 Blender 創作的 3D 夜景角落場景。以倒塌路燈、施工告示牌、警示燈與紅磚步道為元素，透過低調的深夜光影與發光元件，營造安靜且帶有些許故事懸念的城市微縮景觀。'
-}
+        image: 'images/公園路燈.png',
+        tag: '3D ENVIRONMENT',
+        title: '深夜公園角落 - 道路施工',
+        desc: '使用 Blender 創作的 3D 夜景角落場景。以倒塌路燈、施工告示牌、警示燈與紅磚步道為元素，透過低調的深夜光影與發光元件，營造安靜且帶有些許故事懸念的城市微縮景觀。'
+      }
     ];
 
     let currentIndex = 0;
@@ -326,9 +451,10 @@
     });
   </script>
 
-  <!-- 6. 頁尾與聯絡資訊 -->
+  <!-- 7. 頁尾與聯絡資訊 -->
   <footer id="contact" class="py-12 border-t border-purple-900/30 text-center text-gray-500 text-sm">
     <div class="max-w-4xl mx-auto px-6">
+      <p class="text-gray-300 mb-2">電話：0971-188-166</p>
       <p class="text-gray-300 mb-4">歡迎來信交流與合作</p>
       <a href="mailto:linjk.job@gmail.com" class="inline-block px-6 py-2.5 rounded-full bg-gradient-to-r from-neonCyan to-neonPurple text-white font-semibold shadow-lg hover:shadow-neonPurple/50 transition duration-300 mb-8">
         linjk.job@gmail.com
