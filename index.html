@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>林俊鎧| 作品集</title>
+  <link rel="icon" type="image/x-icon" href="images/fu6ek.png">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            techDark: '#0a0b14',
+            techCard: '#121324',
+            neonPurple: '#a855f7',
+            neonCyan: '#06b6d4',
+            neonBlue: '#3b82f6',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* 霓虹發光與毛玻璃效果 */
+    .glow-purple { box-shadow: 0 0 25px rgba(168, 85, 247, 0.25); }
+    .glow-cyan { box-shadow: 0 0 25px rgba(6, 182, 212, 0.25); }
+    .glass-card {
+      background: rgba(18, 19, 36, 0.75);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(168, 85, 247, 0.2);
+    }
+    .glass-nav {
+      background: rgba(10, 11, 20, 0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(6, 182, 212, 0.2);
+    }
+  </style>
+</head>
+<body class="bg-techDark text-gray-100 font-sans antialiased selection:bg-neonPurple selection:text-white">
+
+  <!-- 1. 頂部導航列 (固定跟隨) -->
+  <nav class="fixed top-0 w-full z-50 glass-nav px-6 py-4 flex justify-between items-center">
+    <a href="#about" class="text-xl font-black tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-neonCyan via-neonBlue to-neonPurple hover:opacity-80 transition">
+      PORTFOLIO<span class="text-neonCyan">.</span>
+    </a>
+    <div class="space-x-6 text-sm font-medium text-gray-300">
+      <a href="#about" class="hover:text-neonCyan transition">關於我</a>
+      <a href="#videos" class="hover:text-neonCyan transition">影音作品</a>
+      <a href="#gallery" class="hover:text-neonCyan transition">圖片作品</a>
+      <a href="#contact" class="hover:text-neonCyan transition">聯絡資訊</a>
+    </div>
+  </nav>
+
+  <!-- 2. 首頁 / 自我介紹 (Hero Section) -->
+  <section id="about" class="min-h-screen flex items-center justify-center pt-24 pb-16 px-6 relative overflow-hidden">
+    <!-- 背景裝飾微光 -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-neonPurple/10 rounded-full blur-[120px] pointer-events-none"></div>
+    
+    <div class="max-w-4xl text-center relative z-10">
+      <!-- 大頭照 (已修復路徑語法) -->
+      <div class="inline-block p-1 rounded-full bg-gradient-to-tr from-neonCyan via-neonBlue to-neonPurple mb-8 glow-purple">
+        <img src="images/me.png" alt="Avatar" class="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-2 border-techDark">
+      </div>
+      
+      <h1 class="text-4xl md:text-6xl font-extrabold mb-4 tracking-tight">
+        HI, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-neonCyan to-neonPurple">林俊鎧</span>
+      </h1>
+      
+      <p class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed mb-8">
+        熱衷於數位創作與開發，專長涵蓋遊戲製作、影像剪輯與 3D 美術設計。喜歡探索科技與視覺的結合。
+      </p>
+
+      <!-- 標籤 (已修復錯字) -->
+      <div class="flex flex-wrap justify-center gap-3">
+        <span class="px-4 py-1.5 rounded-full text-xs font-semibold bg-neonPurple/10 text-neonPurple border border-neonPurple/30">Unity / Game Dev</span>
+        <span class="px-4 py-1.5 rounded-full text-xs font-semibold bg-neonCyan/10 text-neonCyan border border-neonCyan/30">Video Editing</span>
+        <span class="px-4 py-1.5 rounded-full text-xs font-semibold bg-neonBlue/10 text-neonBlue border border-neonBlue/30">3D Art & 3D Modeling</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. 5部 YouTube 嵌入影片區塊（5 欄橫向並排） -->
+  <section id="videos" class="py-24 px-4 sm:px-6 max-w-[1600px] mx-auto">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-neonCyan to-neonPurple inline-block">
+        FEATURED VIDEOS
+      </h2>
+      <p class="text-gray-400 text-sm mt-2">精選 5 部影音專案與動態創作</p>
+    </div>
+
+    <!-- 5 欄網格排版：手機 1 欄 | 平板 3 欄 | 電腦 5 欄並排 -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+      
+      <!-- 影片 1 -->
+      <div class="glass-card rounded-xl overflow-hidden transition duration-300 hover:border-neonCyan/50 hover:scale-[1.02]">
+        <div class="aspect-video w-full">
+          <iframe class="w-full h-full" src="https://www.youtube.com/embed/dQ-AwCFUkZA?si=ZAYVFdFf7PP-UQOk" title="YouTube video 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="p-3">
+          <h3 class="text-sm font-bold text-gray-100 break-words leading-snug">RG 1/144 THE GUNDAM BASE LIMITED 00 QAN[T][TRANS-AM CLEAR]</h3>
+        </div>
+      </div>
+
+      <!-- 影片 2 -->
+      <div class="glass-card rounded-xl overflow-hidden transition duration-300 hover:border-neonPurple/50 hover:scale-[1.02]">
+        <div class="aspect-video w-full">
+          <iframe class="w-full h-full" src="https://www.youtube.com/embed/hajAof-1ksA?si=ibusZu5EDQC0HD_j" title="YouTube video 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="p-3">
+          <h3 class="text-sm font-bold text-gray-100 break-words leading-snug"> HG 1/144 全能攻擊自由鋼彈［透明配色］</h3>
+        </div>
+      </div>
+
+      <!-- 影片 3 -->
+      <div class="glass-card rounded-xl overflow-hidden transition duration-300 hover:border-neonCyan/50 hover:scale-[1.02]">
+        <div class="aspect-video w-full">
+          <iframe class="w-full h-full" src="https://www.youtube.com/embed/usBFb7GRNTM?si=PBuGMDCAwEGbKW-b" title="YouTube video 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="p-3">
+          <h3 class="text-sm font-bold text-gray-100 break-words leading-snug">RG RX-78-2 ver.2.0</h3>
+        </div>
+      </div>
+
+      <!-- 影片 4 -->
+      <div class="glass-card rounded-xl overflow-hidden transition duration-300 hover:border-neonPurple/50 hover:scale-[1.02]">
+        <div class="aspect-video w-full">
+          <iframe class="w-full h-full" src="https://www.youtube.com/embed/mjfdOYPBY_Q?si=7wQygdP1TiCxay6F" title="YouTube video 4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="p-3">
+            <h3 class="text-sm font-bold text-gray-100 break-words leading-snug">HG 大阪萬博限定|RX-78F00/E Gundam</h3>
+        </div>
+      </div>
+
+      <!-- 影片 5 -->
+      <div class="glass-card rounded-xl overflow-hidden transition duration-300 hover:border-neonCyan/50 hover:scale-[1.02]">
+        <div class="aspect-video w-full">
+          <iframe class="w-full h-full" src="https://www.youtube.com/embed/mYiGsPuv4Ts?si=bxlsy1Vy5nb8q2zC" title="YouTube video 5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="p-3">
+          <h3 class="text-sm font-bold text-gray-100 break-words leading-snug">MG rx-0 unicorn gundam ver. twc</h3>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 4. 圖片作品畫廊 - 具備箭頭切換與同步說明功能 -->
+  <section id="gallery" class="py-16 px-6 max-w-4xl mx-auto">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-neonPurple to-neonCyan inline-block">
+        GRAPHIC GALLERY
+      </h2>
+     
+    </div>
+
+    <!-- 輪播主容器 -->
+    <div class="glass-card rounded-3xl overflow-hidden glow-purple relative group border border-neonPurple/20">
+      
+      <!-- 圖片顯示區域 -->
+      <div class="relative aspect-[16/9] sm:aspect-[21/9] max-h-[420px] overflow-hidden bg-techDark/50">
+        <img id="gallery-image" src="" alt="Work Art" class="w-full h-full object-contain transition-opacity duration-500 opacity-100">
+        <div class="absolute inset-0 bg-gradient-to-t from-techDark via-transparent to-techDark/20 pointer-events-none"></div>
+
+        <!-- 切換箭頭 (固定置中於圖片上) -->
+        <button onclick="prevSlide()" class="absolute left-4 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-techDark/60 text-neonCyan border border-neonCyan/30 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-neonCyan/20 hover:scale-110 focus:outline-none" aria-label="Previous Slide">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+          </svg>
+        </button>
+        
+        <button onclick="nextSlide()" class="absolute right-4 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-techDark/60 text-neonPurple border border-neonPurple/30 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-neonPurple/20 hover:scale-110 focus:outline-none" aria-label="Next Slide">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- 文字說明區域 -->
+      <div id="gallery-info" class="p-6 md:p-8 border-t border-neonPurple/20 bg-techCard/80 relative z-10">
+        <div class="flex items-center justify-between gap-4 mb-3">
+          <span id="gallery-tag" class="text-xs font-mono text-neonCyan px-3 py-1 rounded-full bg-neonCyan/10 border border-neonCyan/30 tracking-wider">TAG</span>
+          <div id="gallery-counter" class="text-sm font-mono text-gray-500"></div>
+        </div>
+        <h4 id="gallery-title" class="text-2xl font-bold text-white mb-2 tracking-tight">作品名稱</h4>
+        <p id="gallery-desc" class="text-gray-400 text-sm md:text-base leading-relaxed line-clamp-2">作品詳細描述文字...</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. JavaScript 邏輯 -->
+  <script>
+    // 1. 定義你的作品資料 (在此處修改圖片網址與文字)
+    const worksData = [
+      {
+        image: 'images/鬆餅.png',
+        tag: '3D MODEL',
+        title: '三層美式鬆餅 3D 靜物模型',
+        desc: '使用 Blender 進行 3D 建模，並運用 NPR（非寫實渲染）與 Cell-shading 賽璐珞風格 Shader，呈現出如 2D 手繪動畫般的美食質感與奶油流動感。'
+      },
+      /*
+      {
+        image: 'https://via.placeholder.com/1200x600/1a1b2e/06b6d4?text=Work+2',
+        tag: 'UI DESIGN',
+        title: '賽博龐克遊戲介面',
+        desc: '為 Unity 專案設計的 HUD 與主選單介面，強調藍紫高對比色調與幾何線條。'
+      }
+        */
+      {
+        image: 'images/花園鰻渲染2.png',
+        tag: '3D MODEL',
+        title: '花園鰻微縮生態水族箱',
+        desc: '風格化 3D 箱庭設計作品。運用低面數（Low-Poly）碎石散射與燈光佈局，呈現在玻璃展示櫃中探頭的斑點與條紋花園鰻，結合療癒角色與科技感展示盒。'
+      },
+      {
+        image: 'images/做很久的眼鏡.png',
+        tag: 'PROP DESIGN',
+        title: '科幻角色配件 - 復古紅鏡片眼鏡',
+        desc: '專為角色設計的精細 3D 配件道具。具備獨特的金屬鉸鏈與鏡框裁切幾何造型，透過簡約背景襯托金屬質感與紅色半透明鏡片光澤。'
+      },
+      {
+        image: 'images/杯子2.png',
+        tag: '3D RENDER',
+        title: '寫實玻璃高腳杯材質練習',
+        desc: '使用 Blender 進行高腳酒杯的 3D 建模與玻璃材質（Glass BSDF）渲染練習。著重於真實玻璃的高光、折射率（IOR）與半透明影子的光影細節呈獻。'
+      },
+      {
+        image: 'images/apple.png',
+        tag: '3D MODEL',
+        title: 'Stylized Red Apple',
+        desc: '使用 Blender 進行風格化蘋果 3D 靜物建模。著重於幾何曲面流暢度、微霧面漫反射材質設定與柔和攝影棚燈光佈局練習。'
+      },
+      {
+        image: 'images/鳥居.png',
+        tag: '3D MODEL',
+        title: 'Senbon Torii Shrine Pathway',
+        desc: '日式千本鳥居 3D 靜物模型作品，展現精準的模組化結構比例、朱紅漆面質感與強烈的空間縱深感。'
+      },
+      {
+        image: 'images/3d1.jpg',
+        tag: 'UI / LOGO',
+        title: '廣告跳過插件 - 3D 品牌 Logo 設計',
+        desc: '為瀏覽器擴充功能（Extension）設計的 3D 標誌。以「像風一樣將廣告吹走」為核心概念，透過藍色疾風線條劃過復古電視螢幕，直覺呈現快感與無痕跳過廣告的功能體驗。'
+      },
+      {
+        image: 'images/bocar-1.png',
+        tag: '3D ART',
+        title: 'Pink Cowboy & Black Rider',
+        desc: '原創 3D 呆萌風格角色創作，呈現牛仔章魚騎乘圓滾滾黑豬坐騎的逗趣冒險意象。'
+      },
+      {
+        image: 'images/keybow.png',
+        tag: '3D MODEL',
+        title: '粉嫩系機械鍵盤 3D 工業模型',
+        desc: '使用 Blender 打造的全尺寸（100% Layout）機械鍵盤模型。著重於鍵帽曲面弧度（Keycap Profile）、細緻的邊框結構，以及粉紅與珊瑚粉的微霧面質感渲染練習。'
+      },
+      {
+        image: 'images/手指薯條.png',
+        tag: 'CONCEPT ART',
+        title: 'Finger Fries 手指薯條',
+        desc: '充滿黑色幽默與超現實主義風格的 3D 概念作品。翻轉經典速食盒與薯條的外觀，將其替換為帶有深色指甲的手指，呈現視覺上的衝擊感與獨特的荒謬美學。'
+      },
+      {
+  image: 'images/公園路燈.png',
+  tag: '3D ENVIRONMENT',
+  title: '深夜公園角落 - 道路施工',
+  desc: '使用 Blender 創作的 3D 夜景角落場景。以倒塌路燈、施工告示牌、警示燈與紅磚步道為元素，透過低調的深夜光影與發光元件，營造安靜且帶有些許故事懸念的城市微縮景觀。'
+}
+    ];
+
+    let currentIndex = 0;
+    const totalWorks = worksData.length;
+
+    const imgEl = document.getElementById('gallery-image');
+    const tagEl = document.getElementById('gallery-tag');
+    const titleEl = document.getElementById('gallery-title');
+    const descEl = document.getElementById('gallery-desc');
+    const counterEl = document.getElementById('gallery-counter');
+
+    function updateSlide(index) {
+      if (index >= totalWorks) {
+        currentIndex = 0;
+      } else if (index < 0) {
+        currentIndex = totalWorks - 1;
+      } else {
+        currentIndex = index;
+      }
+
+      const data = worksData[currentIndex];
+
+      imgEl.classList.remove('opacity-100');
+      imgEl.classList.add('opacity-0');
+
+      setTimeout(() => {
+        imgEl.src = data.image;
+        tagEl.innerText = data.tag;
+        titleEl.innerText = data.title;
+        descEl.innerText = data.desc;
+        counterEl.innerText = `${currentIndex + 1} / ${totalWorks}`;
+
+        imgEl.classList.remove('opacity-0');
+        imgEl.classList.add('opacity-100');
+      }, 250);
+    }
+
+    function nextSlide() {
+      updateSlide(currentIndex + 1);
+    }
+
+    function prevSlide() {
+      updateSlide(currentIndex - 1);
+    }
+
+    window.onload = function() {
+      if (totalWorks > 0) {
+        updateSlide(0);
+      } else {
+        document.getElementById('gallery').style.display = 'none';
+      }
+    };
+    
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'ArrowLeft') prevSlide();
+      if (e.key === 'ArrowRight') nextSlide();
+    });
+  </script>
+
+  <!-- 6. 頁尾與聯絡資訊 -->
+  <footer id="contact" class="py-12 border-t border-purple-900/30 text-center text-gray-500 text-sm">
+    <div class="max-w-4xl mx-auto px-6">
+      <p class="text-gray-300 mb-4">歡迎來信交流與合作</p>
+      <a href="mailto:linjk.job@gmail.com" class="inline-block px-6 py-2.5 rounded-full bg-gradient-to-r from-neonCyan to-neonPurple text-white font-semibold shadow-lg hover:shadow-neonPurple/50 transition duration-300 mb-8">
+        linjk.job@gmail.com
+      </a>
+      <p>&copy; 2026 LINJUNKAI. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
